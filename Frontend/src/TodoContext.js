@@ -1,10 +1,10 @@
 import { create } from "zustand";
 
-const url = "http://localhost:3020/api/todos";
+const url = "https://todo-backend-di6n.onrender.com/api/todos";
 const useTodoStore = create((set) => ({
   todos: [],
   getTodos: async () => {
-    const res = await fetch("http://localhost:3020/api/todos/");
+    const res = await fetch(`${url}/`);
     const data = await res.json();
 
     set({ todos: data.todos });
