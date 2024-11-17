@@ -46,8 +46,8 @@ const toggleTodo = async (req, res) => {
       .status(201)
       .json({ status: true, message: "The Task was updated" });
   } catch (error) {
-    return res.staus(401).json({ success: false, error });
+    return res.status(401).json({ success: false, error });
   }
 };
 
-export default { getAllTodos, createTodo, deleteTodo, toggleTodo };
+export { getAllTodos, createTodo, deleteTodo, toggleTodo };
