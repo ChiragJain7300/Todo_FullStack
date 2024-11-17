@@ -4,24 +4,40 @@ import {
   Container,
   Flex,
   Heading,
+  Image,
   Text,
   VStack,
 } from "@chakra-ui/react";
 import sunImg from "./assets/images/icon-sun.svg";
 import CreateTodo from "./components/CreateTodo";
 import DisplayTodo from "./components/DisplayTodo";
+import bgDeskImg from "./assets/images/bg-desktop-dark.jpg";
 function App() {
+  // bgImage={`url(${bgDeskImg})`} // Replace with your image path
+  //     bgSize="cover" // Makes the background cover the container
+  //     bgPosition="center" // Centers the background image
+  //     bgRepeat="no-repeat" // Prevents tiling of the background
   return (
     <Container
       w="full"
       minH="100vh"
-      display={"flex"}
+      display="flex"
       alignItems="center"
       justifyContent="center"
       py={10}
+      // bg={""} //hsl(235, 21%, 11%)
     >
-      <Box minW="350px" w="500px">
-        <VStack>
+      <Image
+        src={bgDeskImg}
+        position={"absolute"}
+        top={0}
+        left={0}
+        zIndex={-15}
+        w={"100vw"}
+        h={"280px"}
+      />
+      <Box minW="400px" w="600px">
+        <VStack mb="40px">
           <Flex justify="space-between" align="center" w="full" mb={8}>
             <Heading as="h1" textTransform="uppercase" letterSpacing={10}>
               Todo
@@ -32,9 +48,10 @@ function App() {
           </Flex>
           <CreateTodo />
           <DisplayTodo />
-
-          <Text>Drag and Drop to render list</Text>
         </VStack>
+        <Text align="center" color="grey">
+          Drag and Drop to render list
+        </Text>
       </Box>
     </Container>
   );

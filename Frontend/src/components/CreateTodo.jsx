@@ -38,6 +38,7 @@ function CreateTodo() {
       gap={4}
       shadow="xl"
       mb={5}
+      bg={"hsl(235, 24%, 19%)"}
     >
       <Checkbox size="lg" colorScheme="orange" disabled />
       <Input

@@ -31,6 +31,7 @@ function Todo({ todo }) {
       justify="flex-start"
       borderBottom="1px"
       borderColor="blue.700"
+      bg={"hsl(235, 24%, 19%)"}
       py={4}
       px={5}
       gap={4}
