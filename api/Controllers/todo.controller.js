@@ -50,4 +50,4 @@ const toggleTodo = async (req, res) => {
   }
 };
 
-export { getAllTodos, createTodo, deleteTodo, toggleTodo };
+export default { getAllTodos, createTodo, deleteTodo, toggleTodo };

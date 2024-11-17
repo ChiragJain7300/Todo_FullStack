@@ -6,7 +6,7 @@ import {
   toggleTodo,
 } from "../Controllers/todo.controller.js";
 
-export const todoRouter = express.Router();
+export default todoRouter = express.Router();
 
 todoRouter.route("/").get(getAllTodos).post(createTodo);
 todoRouter.route("/:id").delete(deleteTodo).patch(toggleTodo);
